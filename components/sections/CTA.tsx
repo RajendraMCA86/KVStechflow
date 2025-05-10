@@ -33,7 +33,7 @@ export default function CTA() {
               </Button>
             </Link>
             <Link href="/services">
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+              <Button size="lg" variant="outline" className="border-white bg-transparent text-white hover:bg-white/10">
                 Explore Services
               </Button>
             </Link>

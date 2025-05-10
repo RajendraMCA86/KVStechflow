@@ -9,7 +9,7 @@ interface PageHeaderProps {
 
 export default function PageHeader({ title, description }: PageHeaderProps) {
   return (
-    <section className="bg-gradient-to-r from-orange-500 to-red-500 py-20 md:py-32">
+    <section className="bg-gradient-to-r from-gray-700 to-gray-900 py-20 md:py-32">
       <div className="container mx-auto text-center text-white">
         <motion.h1 
           className="text-4xl md:text-5xl font-bold mb-6"

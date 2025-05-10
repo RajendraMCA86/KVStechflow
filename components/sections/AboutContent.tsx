@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
+import Link from 'next/link';
 
 export default function AboutContent() {
   return (
@@ -40,10 +41,11 @@ export default function AboutContent() {
               To be the trusted technology partner for businesses worldwide, known for our innovative solutions, 
               technical excellence, and unwavering commitment to client success.
             </p>
-            
-            <Button className="bg-primary hover:bg-primary/90">
-              Contact Us <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
+            <Link href="/contact" className="flex items-center">
+              <Button className="bg-primary hover:bg-primary/90">
+                Contact Us <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </Link>
           </motion.div>
           
           <motion.div

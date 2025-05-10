@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 import Logo from '@/components/ui/Logo';
@@ -19,6 +20,7 @@ const navLinks = [
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -53,13 +55,13 @@ export default function Navbar() {
               href={link.href}
               className={cn(
                 "font-medium transition-colors",
+                pathname === link.href ? "text-primary font-bold" : "",
                 scrolled ? "text-gray-700 hover:text-primary" : "text-white hover:text-primary"
               )}
             >
               {link.label}
             </Link>
           ))}
-          <Button className="bg-primary text-white hover:bg-primary/90">Get Started</Button>
         </nav>
         
         {/* Mobile Navigation Toggle */}
@@ -98,13 +100,15 @@ export default function Navbar() {
                   <Link 
                     href={link.href}
                     onClick={() => setIsOpen(false)}
-                    className="block py-2 text-gray-700 hover:text-primary font-medium transition-colors"
+                    className={cn(
+                      "block py-2 font-medium transition-colors",
+                      pathname === link.href ? "text-primary font-bold" : "text-gray-700 hover:text-primary"
+                    )}
                   >
                     {link.label}
                   </Link>
                 </motion.div>
               ))}
-              <Button className="w-full bg-primary text-white hover:bg-primary/90 mt-4">Get Started</Button>
             </div>
           </motion.div>
         )}
