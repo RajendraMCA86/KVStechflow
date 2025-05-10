@@ -14,8 +14,8 @@ export default function ContactInfo() {
     {
       icon: <Phone className="h-6 w-6 text-primary" />,
       title: 'Call Us',
-      content: '+91 8458829844',
-      link: 'tel:+918458829844',
+      content: '+91 9529906991',
+      link: 'tel:+919529906991',
     },
     {
       icon: <MapPin className="h-6 w-6 text-primary" />,
