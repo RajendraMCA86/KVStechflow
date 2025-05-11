@@ -2,8 +2,8 @@
   "name": "nextjs",
   "version": "0.1.0",
   "private": true,
-   "homepage": "https://rajendramca86.github.io/KVStechflow",
   "scripts": {
+    "homepage": "https://www.kvstechflow.com/",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d out",
     "dev": "next dev",
